@@ -1,3 +1,9 @@
+# Pull COVID19 country data
+
+Git Action to fetch JHU data. The action runs as a cronjob at 2200 hours every day.
+
+
+```
 name: Configure
 on:
  push:
@@ -29,7 +35,7 @@ jobs:
         run: |
           
           pip install -r requirements.txt --upgrade pip
-          python3 demo.py
+          python3 runtest.py
           
           # cat result.txt >> tmpresult.txt
 
@@ -62,3 +68,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
 
+```
