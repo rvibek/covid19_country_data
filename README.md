@@ -9,7 +9,7 @@ on:
  push:
   branches: main
  schedule:
-    - cron: "0 22 * * *"
+    - cron: "0 21 * * *"
 
 jobs:
  # python installtion
