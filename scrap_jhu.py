@@ -2,6 +2,7 @@ import pandas as pd
 from urllib.parse import urljoin
 import sys
 
+# code to scrape data from JHU
 country =  sys.argv[1]
 baseurl = "https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/"
 confirmed = "time_series_covid19_confirmed_global.csv"
@@ -13,7 +14,15 @@ states = [('confirmed', "time_series_covid19_confirmed_global.csv"),
           ('deaths', "time_series_covid19_deaths_global.csv"),
           ('recovered', "time_series_covid19_recovered_global.csv")]
 
+
 def makedf(state, stateurl, country):
+    """_summary_
+
+    Args:
+        state (_type_): _description_
+        stateurl (_type_): _description_
+        country (_type_): _description_
+    """
     df = pd.read_csv(stateurl)
     df = df[df['Country/Region'] == country]
     # df['status'] = state
