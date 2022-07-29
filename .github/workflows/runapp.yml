@@ -29,7 +29,7 @@ jobs:
         run: |
           
           pip install -r requirements.txt --upgrade pip
-          python3 demo.py
+          # python3 demo.py
           
           # cat result.txt >> tmpresult.txt
 
